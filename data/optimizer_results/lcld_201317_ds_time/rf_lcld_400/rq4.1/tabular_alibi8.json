@@ -1,0 +1,123 @@
+{
+    "config": {
+        "logging": {
+            "version": 1,
+            "formatters": {
+                "simple": {
+                    "format": "[%(levelname)-.4s] %(asctime)s - %(name)s - %(message)s"
+                }
+            },
+            "handlers": {
+                "console": {
+                    "class": "logging.StreamHandler",
+                    "level": "DEBUG",
+                    "formatter": "simple",
+                    "stream": "ext://sys.stdout"
+                }
+            },
+            "loggers": {
+                "__main__": {
+                    "level": "DEBUG"
+                },
+                "optuna": {
+                    "level": "ERROR"
+                }
+            },
+            "root": {
+                "level": "DEBUG",
+                "handlers": [
+                    "console"
+                ]
+            }
+        },
+        "performance": {
+            "predict_forward": 5000,
+            "n_jobs": {
+                "model": 8,
+                "simulator": 16,
+                "optimizer": 1
+            }
+        },
+        "experience": {
+            "random_state": 42
+        },
+        "evaluation_params": {
+            "batch_size": 20000,
+            "metric": {
+                "name": "mcc"
+            },
+            "n_score": 2
+        },
+        "dataset": {
+            "name": "lcld_201317_ds_time"
+        },
+        "common_detectors_params": {
+            "batch_size": 5000
+        },
+        "common_runs_params": {
+            "first_train_window_size": -1,
+            "training_step_size": 5000,
+            "test_start_idx": 400000,
+            "train_window_size": 200000,
+            "random_state": 42,
+            "model": {
+                "source": "drift_study.model_arch.tree_model",
+                "name": "rf_lcld_400"
+            },
+            "delays": {
+                "label": "10days",
+                "drift": 0,
+                "retraining": "2W"
+            },
+            "detectors": [
+                {
+                    "name": "n_batch",
+                    "params": {}
+                },
+                {
+                    "name": "tabular_alibi",
+                    "params": {
+                        "correction": "bonferroni",
+                        "p_val": 0.001772521179654811
+                    }
+                }
+            ],
+            "name": "tabular_alibi8",
+            "type": "data"
+        },
+        "runs": {
+            "first_train_window_size": -1,
+            "training_step_size": 5000,
+            "test_start_idx": 400000,
+            "train_window_size": 200000,
+            "random_state": 42,
+            "model": {
+                "source": "drift_study.model_arch.tree_model",
+                "name": "rf_lcld_400"
+            },
+            "delays": {
+                "label": "10days",
+                "drift": 0,
+                "retraining": "2W"
+            },
+            "detectors": [
+                {
+                    "name": "n_batch",
+                    "params": {}
+                },
+                {
+                    "name": "tabular_alibi",
+                    "params": {
+                        "correction": "bonferroni",
+                        "p_val": 0.001772521179654811
+                    }
+                }
+            ],
+            "name": "tabular_alibi8",
+            "type": "data"
+        },
+        "sub_dir_path": "full_delays_half"
+    },
+    "n_train": 138,
+    "ml_metric": 0.27473552538923657
+}

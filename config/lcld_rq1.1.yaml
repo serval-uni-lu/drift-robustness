@@ -1,0 +1,86 @@
+common_detectors_params: {}
+common_runs_params:
+  delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  first_train_window_size: 400000
+  random_state: 42
+  test_start_idx: 400000
+  train_window_size: 400000
+  training_step_size: 5000
+dataset:
+  name: lcld_201317_ds_time
+evaluation_params:
+  batch_size: 20000
+  metric:
+    name: mcc
+  n_score: 2
+performance:
+  n_jobs:
+    model: -1
+    simulator: -1
+  predict_forward: 2000000
+runs:
+- detectors:
+  - name: no_detection
+    params: {}
+  model:
+    name: rf_lcld
+    source: drift_study.model_arch.tree_model
+  name: no_detection_rf_lcld
+  type: baseline
+- detectors:
+  - name: no_detection
+    params: {}
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: no_detection_rf_lcld_400
+  type: baseline
+- detectors:
+  - name: manual_index
+    params:
+      detect_idxs:
+      - 419999
+      - 599999
+      - 799999
+      - 859999
+      - 939999
+  model:
+    name: rf_lcld
+    source: drift_study.model_arch.tree_model
+  name: manual_rf_lcld
+  test_start_idx: 400000
+  type: baseline
+- detectors:
+  - name: manual_index
+    params:
+      detect_idxs:
+      - 419999
+      - 599999
+      - 799999
+      - 859999
+      - 939999
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: manual_rf_lcld_400
+  test_start_idx: 400000
+  type: baseline
+- detectors:
+  - name: manual_index
+    params:
+      detect_idxs:
+      - 419999
+      - 599999
+      - 799999
+      - 859999
+      - 939999
+  model:
+    name: opt_rf_classifier
+    source: drift_study.model_arch.tree_model
+  name: manual_opt_rf_classifier
+  test_start_idx: 400000
+  type: baseline
+sub_dir_path: rq1.1

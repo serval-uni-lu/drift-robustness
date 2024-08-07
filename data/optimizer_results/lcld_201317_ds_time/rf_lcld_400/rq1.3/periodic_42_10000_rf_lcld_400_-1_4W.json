@@ -1,0 +1,107 @@
+{
+    "config": {
+        "logging": {
+            "version": 1,
+            "formatters": {
+                "simple": {
+                    "format": "[%(levelname)-.4s] %(asctime)s - %(name)s - %(message)s"
+                }
+            },
+            "handlers": {
+                "console": {
+                    "class": "logging.StreamHandler",
+                    "level": "DEBUG",
+                    "formatter": "simple",
+                    "stream": "ext://sys.stdout"
+                }
+            },
+            "loggers": {
+                "__main__": {
+                    "level": "INFO"
+                },
+                "optuna": {
+                    "level": "ERROR"
+                }
+            },
+            "root": {
+                "level": "WARNING",
+                "handlers": [
+                    "console"
+                ]
+            }
+        },
+        "common_detectors_params": {},
+        "common_runs_params": {
+            "first_train_window_size": -1,
+            "test_start_idx": 400000,
+            "training_step_size": 5000,
+            "delays": {
+                "drift": 0,
+                "label": "10days",
+                "retraining": "4W"
+            },
+            "detectors": [
+                {
+                    "name": "periodic",
+                    "params": {
+                        "period": 10000
+                    }
+                }
+            ],
+            "model": {
+                "name": "rf_lcld_400",
+                "source": "drift_study.model_arch.tree_model"
+            },
+            "name": "periodic_42_10000_rf_lcld_400_-1_4W",
+            "random_state": 42,
+            "train_window_size": -1,
+            "type": "baseline"
+        },
+        "dataset": {
+            "name": "lcld_201317_ds_time"
+        },
+        "evaluation_params": {
+            "batch_size": 20000,
+            "metric": {
+                "name": "mcc"
+            },
+            "n_score": 2
+        },
+        "performance": {
+            "n_jobs": {
+                "model": 8,
+                "simulator": 16
+            },
+            "predict_forward": 10000
+        },
+        "runs": {
+            "first_train_window_size": -1,
+            "test_start_idx": 400000,
+            "training_step_size": 5000,
+            "delays": {
+                "drift": 0,
+                "label": "10days",
+                "retraining": "4W"
+            },
+            "detectors": [
+                {
+                    "name": "periodic",
+                    "params": {
+                        "period": 10000
+                    }
+                }
+            ],
+            "model": {
+                "name": "rf_lcld_400",
+                "source": "drift_study.model_arch.tree_model"
+            },
+            "name": "periodic_42_10000_rf_lcld_400_-1_4W",
+            "random_state": 42,
+            "train_window_size": -1,
+            "type": "baseline"
+        },
+        "sub_dir_path": "periodic400"
+    },
+    "n_train": 72,
+    "ml_metric": 0.27391383127141605
+}

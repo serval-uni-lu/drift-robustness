@@ -1,0 +1,139 @@
+{
+    "config": {
+        "logging": {
+            "version": 1,
+            "formatters": {
+                "simple": {
+                    "format": "[%(levelname)-.4s] %(asctime)s - %(name)s - %(message)s"
+                }
+            },
+            "handlers": {
+                "console": {
+                    "class": "logging.StreamHandler",
+                    "level": "DEBUG",
+                    "formatter": "simple",
+                    "stream": "ext://sys.stdout"
+                }
+            },
+            "loggers": {
+                "__main__": {
+                    "level": "DEBUG"
+                },
+                "optuna": {
+                    "level": "ERROR"
+                }
+            },
+            "root": {
+                "level": "DEBUG",
+                "handlers": [
+                    "console"
+                ]
+            }
+        },
+        "performance": {
+            "predict_forward": 5000,
+            "n_jobs": {
+                "model": 2,
+                "optimizer": 16
+            }
+        },
+        "experience": {
+            "random_state": 42
+        },
+        "evaluation_params": {
+            "batch_size": 20000,
+            "metric": {
+                "name": "mcc"
+            },
+            "n_score": 2,
+            "n_splits": 4
+        },
+        "dataset": {
+            "name": "lcld_201317_ds_time"
+        },
+        "common_detectors_params": {
+            "batch_size": 5000
+        },
+        "common_runs_params": {
+            "first_train_window_size": -1,
+            "training_step_size": 5000,
+            "test_start_idx": 400000,
+            "random_state": 42,
+            "train_window_size": -1,
+            "model": {
+                "source": "drift_study.model_arch.tree_model",
+                "name": "rf_lcld_400"
+            },
+            "delays": {
+                "label": 0,
+                "drift": 0,
+                "retraining": 0
+            },
+            "name": "kswin_proba_error",
+            "type": "error",
+            "detectors": [
+                {
+                    "name": "kswin",
+                    "params": {
+                        "metric_conf": {
+                            "name": "proba_error"
+                        },
+                        "alpha": 0.009839556191488404,
+                        "stat_size": 147,
+                        "ks_window_size": 442
+                    }
+                }
+            ]
+        },
+        "trial_params": {
+            "n_trials": 25,
+            "model_type": "random_forest"
+        },
+        "runs": [
+            {
+                "first_train_window_size": -1,
+                "training_step_size": 5000,
+                "test_start_idx": 400000,
+                "random_state": 42,
+                "train_window_size": -1,
+                "model": {
+                    "source": "drift_study.model_arch.tree_model",
+                    "name": "rf_lcld_400"
+                },
+                "delays": {
+                    "label": 0,
+                    "drift": 0,
+                    "retraining": 0
+                },
+                "name": "kswin_proba_error10",
+                "type": "error",
+                "detectors": [
+                    {
+                        "name": "kswin",
+                        "params": {
+                            "metric_conf": {
+                                "name": "proba_error"
+                            },
+                            "alpha": 0.00657420870587919,
+                            "stat_size": 218,
+                            "ks_window_size": 654
+                        }
+                    }
+                ]
+            }
+        ],
+        "sub_dir_path": "opt400_delays_none"
+    },
+    "n_train": [
+        16,
+        32,
+        48,
+        64
+    ],
+    "ml_metric": [
+        0.26776831318491695,
+        0.2649712517536895,
+        0.25866036543893056,
+        0.24743293476849954
+    ]
+}

@@ -1,0 +1,46 @@
+---
+sub_dir_path: rq1.1
+performance:
+  predict_forward: 2000000
+  n_jobs:
+    model: -1
+    simulator: -1
+evaluation_params:
+  batch_size: 20000
+  metric:
+    name: mcc
+  n_score: 2
+dataset:
+  name: lcld_201317_ds_time
+common_detectors_params: {}
+common_runs_params:
+  training_step_size: 5000
+  test_start_idx: 400000
+  random_state: 42
+  train_window_size: 400000
+  first_train_window_size: 400000
+  delays:
+    label: 0
+    drift: 0
+    retraining: 0
+runs:
+  - name: no_detection
+    type: baseline
+    detectors:
+      - name: no_detection
+        params: {}
+    model:
+      source: drift_study.model_arch.tree_model
+      name:
+        grid: [rf_lcld, rf_lcld_400]
+  - name: manual
+    type: baseline
+    detectors:
+      - name: manual_index
+        params:
+          detect_idxs: [419999, 599999, 799999, 859999, 939999]
+    model:
+      source: drift_study.model_arch.tree_model
+      name:
+        grid: [rf_lcld, rf_lcld_400, opt_rf_classifier]
+    test_start_idx: 400000

@@ -1,0 +1,1069 @@
+common_detectors_params: {}
+common_runs_params:
+  first_train_window_size: -1
+  test_start_idx: 400000
+  training_step_size: 5000
+dataset:
+  name: lcld_201317_ds_time
+evaluation_params:
+  batch_size: 20000
+  metric:
+    name: mcc
+  n_score: 2
+performance:
+  n_jobs:
+    model: -1
+    simulator: -1
+  predict_forward: 10000
+runs:
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_50000_4W
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_50000_0
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_100000_4W
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_100000_0
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_200000_4W
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_200000_0
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_400000_4W
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_400000_0
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_-1_4W
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 5000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_5000_rf_lcld_400_-1_0
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_50000_4W
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_50000_0
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_100000_4W
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_100000_0
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_200000_4W
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_200000_0
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_400000_4W
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_400000_0
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_-1_4W
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 10000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_10000_rf_lcld_400_-1_0
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_50000_4W
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_50000_0
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_100000_4W
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_100000_0
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_200000_4W
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_200000_0
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_400000_4W
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_400000_0
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_-1_4W
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 20000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_20000_rf_lcld_400_-1_0
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_50000_4W
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_50000_0
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_100000_4W
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_100000_0
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_200000_4W
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_200000_0
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_400000_4W
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_400000_0
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_-1_4W
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 50000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_50000_rf_lcld_400_-1_0
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_50000_4W
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_50000_0
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_100000_4W
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_100000_0
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_200000_4W
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_200000_0
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_400000_4W
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_400000_0
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_-1_4W
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 100000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_100000_rf_lcld_400_-1_0
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_50000_4W
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_50000_0
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_100000_4W
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_100000_0
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_200000_4W
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_200000_0
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_400000_4W
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_400000_0
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_-1_4W
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 200000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_200000_rf_lcld_400_-1_0
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_50000_4W
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_50000_0
+  random_state: 42
+  train_window_size: 50000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_100000_4W
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_100000_0
+  random_state: 42
+  train_window_size: 100000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_200000_4W
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_200000_0
+  random_state: 42
+  train_window_size: 200000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_400000_4W
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_400000_0
+  random_state: 42
+  train_window_size: 400000
+  type: baseline
+- delays:
+    drift: 0
+    label: 10days
+    retraining: 4W
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_-1_4W
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+- delays:
+    drift: 0
+    label: 0
+    retraining: 0
+  detectors:
+  - name: periodic
+    params:
+      period: 400000
+  model:
+    name: rf_lcld_400
+    source: drift_study.model_arch.tree_model
+  name: periodic_42_400000_rf_lcld_400_-1_0
+  random_state: 42
+  train_window_size: -1
+  type: baseline
+sub_dir_path: rq1.3

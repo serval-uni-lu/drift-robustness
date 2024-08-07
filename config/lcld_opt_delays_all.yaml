@@ -1,0 +1,686 @@
+runs:
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.7251215774827089
+      lambda_val: 0.9119167232179375
+  name: hddm_w_error18
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: tabular_alibi
+    params:
+      correction: fdr
+      p_val: 0.000529033283972585
+  name: tabular_alibi17
+  type: data
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: aries
+    params: {}
+  - name: adwin
+    params:
+      delta: 0.9523870342993004
+      grace_period: 984
+  name: aries_all12
+  type: predictive
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.20932455550424292
+      lambda_val: 0.732693678751908
+  name: hddm_w_error19
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.4116160985294933
+      lambda_val: 0.9986536895506056
+  name: hddm_w_error21
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.28379864297939494
+      lambda_val: 0.7862614608915536
+  name: hddm_w_error13
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.9809241459451904
+      lambda_val: 0.48189632966332974
+  name: hddm_w_error14
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: aries
+    params: {}
+  - name: adwin
+    params:
+      delta: 0.9795435622317207
+      grace_period: 942
+  name: aries_all22
+  type: predictive
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.44380634161439686
+      lambda_val: 0.7652255381360857
+  name: hddm_w_error17
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: evidently
+    params:
+      cat_threshold: 0.29338962887426584
+      drift_share: 0.1739992591450406
+      num_threshold: 0.08972859009536702
+  name: data_evidently14
+  type: data
+- detectors:
+  - name: eddm
+    params:
+      alpha: 0.9809241459451904
+      beta: 0.9809241459451904
+      warm_start: 497
+  name: eddm_error14
+  type: error
+- detectors:
+  - name: hddm_a
+    params:
+      drift_confidence: 0.001
+  name: hddm_a_error0
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: rf_uncertainty
+    params:
+      uncertainty_type: total
+  - name: adwin
+    params:
+      delta: 0.5559690830150985
+      grace_period: 193
+      metric_conf:
+        name: y_scores
+  name: rf_uncertainty20
+  type: predictive
+- detectors:
+  - name: kswin
+    params:
+      alpha: 0.00023170643371796118
+      ks_window_size: 289
+      metric_conf:
+        name: class_error
+      stat_size: 96
+  name: kswin_class_error16
+  type: error
+- detectors:
+  - name: kswin
+    params:
+      alpha: 9.435073501676948e-05
+      ks_window_size: 580
+      metric_conf:
+        name: proba_error
+      stat_size: 193
+  name: kswin_proba_error12
+  type: error
+- detectors:
+  - name: kswin
+    params:
+      alpha: 0.0001519388390065473
+      ks_window_size: 907
+      metric_conf:
+        name: proba_error
+      stat_size: 302
+  name: kswin_proba_error6
+  type: error
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.0105756926897203
+      grace_period: 162
+      metric_conf:
+        name: class_error
+  name: adwin_class15
+  type: error
+- detectors:
+  - name: hddm_a
+    params:
+      drift_confidence: 0.19240492937256665
+  name: hddm_a_error17
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: tabular_alibi
+    params:
+      correction: bonferroni
+      p_val: 0.0017454416932216454
+  name: tabular_alibi5
+  type: data
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.2689857401345008
+      lambda_val: 0.5863945541863704
+  name: hddm_w_error6
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.9316842256217661
+      lambda_val: 0.8835466753043769
+  name: hddm_w_error8
+  type: error
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.002
+      grace_period: 10
+      metric_conf:
+        name: class_error
+  name: adwin_class0
+  type: error
+- detectors:
+  - name: n_batch
+    params:
+      batch_size: 50
+  - name: pca_cd
+    params:
+      delta: 0.0032500170214950636
+      divergence_metric: mkl
+      ev_threshold: 0.5680894411493261
+      ph_t_ratio: 0.013675641487398985
+  name: pca_cd9
+  type: data
+- detectors:
+  - name: ddm
+    params:
+      drift_threshold: 3.0
+      warm_start: 30
+  name: ddm_error0
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.001
+      lambda_val: 0.05
+  name: hddm_w_error0
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: aries
+    params: {}
+  - name: adwin
+    params:
+      delta: 0.37454036976712474
+      grace_period: 952
+  name: aries_all1
+  type: predictive
+- detectors:
+  - name: page_hinkley
+    params:
+      alpha: 0.9999
+      delta: 0.005
+      metric_conf:
+        name: class_error
+      min_instances: 30
+      threshold: 50.0
+  name: page_hinkley_class_error0
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.3745401188473625
+      lambda_val: 0.9507143064099162
+  name: hddm_w_error1
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.9322903419117876
+      lambda_val: 0.1692831893256715
+  name: hddm_w_error7
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: tabular_alibi
+    params:
+      correction: bonferroni
+      p_val: 0.00139624429608
+  name: tabular_alibi13
+  type: data
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: rf_uncertainty
+    params:
+      uncertainty_type: total
+  - name: adwin
+    params:
+      delta: 0.6106146765755278
+      grace_period: 580
+      metric_conf:
+        name: y_scores
+  name: rf_uncertainty7
+  type: predictive
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: evidently
+    params:
+      cat_threshold: 0.30055790475659266
+      drift_share: 0.02058547371130815
+      num_threshold: 0.3540365808254449
+  name: data_evidently3
+  type: data
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: evidently
+    params:
+      cat_threshold: 0.20908416907624733
+      drift_share: 0.0709208175123574
+      num_threshold: 0.4003377274707664
+  name: data_evidently15
+  type: data
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.01826066248297973
+      grace_period: 185
+      metric_conf:
+        name: proba_error
+  name: adwin_proba23
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: evidently
+    params:
+      cat_threshold: 0.03144386859138558
+      drift_share: 0.8112915549963233
+      num_threshold: 0.006947475311352289
+  name: data_evidently11
+  type: data
+- detectors:
+  - name: kswin
+    params:
+      alpha: 0.0005592730951242872
+      ks_window_size: 800
+      metric_conf:
+        name: class_error
+      stat_size: 266
+  name: kswin_class_error5
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: tabular_alibi
+    params:
+      correction: bonferroni
+      p_val: 0.001772521179654811
+  name: tabular_alibi8
+  type: data
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.023295271893233646
+      grace_period: 266
+      metric_conf:
+        name: proba_error
+  name: adwin_proba11
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.15601864044243652
+      lambda_val: 0.15599452033620265
+  name: hddm_w_error3
+  type: error
+- detectors:
+  - name: kswin
+    params:
+      alpha: 0.003120734412203717
+      ks_window_size: 198
+      metric_conf:
+        name: class_error
+      stat_size: 66
+  name: kswin_class_error3
+  type: error
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.006707679979938171
+      grace_period: 15
+      metric_conf:
+        name: class_error
+  name: adwin_class19
+  type: error
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.028656469699866127
+      grace_period: 34
+      metric_conf:
+        name: proba_error
+  name: adwin_proba17
+  type: error
+- detectors:
+  - name: hddm_a
+    params:
+      drift_confidence: 0.1579613455654301
+  name: hddm_a_error22
+  type: error
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.002
+      grace_period: 10
+      metric_conf:
+        name: proba_error
+  name: adwin_proba0
+  type: error
+- detectors:
+  - name: eddm
+    params:
+      alpha: 0.5915321183085637
+      beta: 0.5915321183085637
+      warm_start: 90
+  name: eddm_error21
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: rf_uncertainty
+    params:
+      uncertainty_type: total
+  - name: adwin
+    params:
+      delta: 0.002
+      grace_period: 10
+      metric_conf:
+        name: y_scores
+  name: rf_uncertainty0
+  type: predictive
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: tabular_alibi
+    params:
+      correction: bonferroni
+      p_val: 0.0004749973890131791
+  name: tabular_alibi11
+  type: data
+- detectors:
+  - name: page_hinkley
+    params:
+      alpha: 0.9999
+      delta: 0.005
+      metric_conf:
+        name: proba_error
+      min_instances: 30
+      threshold: 50.0
+  name: page_hinkley_proba_error0
+  type: error
+- detectors:
+  - name: eddm
+    params:
+      alpha: 0.5532312752949148
+      beta: 0.5532312752949148
+      warm_start: 60
+  name: eddm_error12
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.07438639222416644
+      lambda_val: 0.4702908868705027
+  name: hddm_w_error9
+  type: error
+- detectors:
+  - name: kswin
+    params:
+      alpha: 2.6333701881710013e-05
+      ks_window_size: 63
+      metric_conf:
+        name: proba_error
+      stat_size: 21
+  name: kswin_proba_error24
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: tabular_alibi
+    params:
+      correction: bonferroni
+      p_val: 0.0008791189593401938
+  name: tabular_alibi23
+  type: data
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: evidently
+    params:
+      cat_threshold: 0.1327382396611242
+      drift_share: 0.019518875636462443
+      num_threshold: 0.29539152917523037
+  name: data_evidently22
+  type: data
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.009268077294887978
+      grace_period: 11
+      metric_conf:
+        name: class_error
+  name: adwin_class24
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.5532312752949148
+      lambda_val: 0.031068060708761835
+  name: hddm_w_error12
+  type: error
+- detectors:
+  - name: kswin
+    params:
+      alpha: 5.042297410839263e-05
+      ks_window_size: 568
+      metric_conf:
+        name: class_error
+      stat_size: 189
+  name: kswin_class_error22
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: tabular_alibi
+    params:
+      correction: bonferroni
+      p_val: 0.001358707935537412
+  name: tabular_alibi22
+  type: data
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.01260065383505049
+      grace_period: 45
+      metric_conf:
+        name: class_error
+  name: adwin_class22
+  type: error
+- detectors:
+  - name: hddm_a
+    params:
+      drift_confidence: 0.0032721519037693194
+  name: hddm_a_error23
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: rf_uncertainty
+    params:
+      uncertainty_type: epistemic
+  - name: adwin
+    params:
+      delta: 0.6320756202649191
+      grace_period: 201
+      metric_conf:
+        name: y_scores
+  name: rf_uncertainty23
+  type: predictive
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: rf_uncertainty
+    params:
+      uncertainty_type: epistemic
+  - name: adwin
+    params:
+      delta: 0.5986582868800682
+      grace_period: 164
+      metric_conf:
+        name: y_scores
+  name: rf_uncertainty1
+  type: predictive
+- detectors:
+  - name: eddm
+    params:
+      alpha: 0.9603833411608714
+      beta: 0.9603833411608714
+      warm_start: 220
+  name: eddm_error11
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: tabular_alibi
+    params:
+      correction: bonferroni
+      p_val: 0.001262813692310216
+  name: tabular_alibi21
+  type: data
+- detectors:
+  - name: eddm
+    params:
+      alpha: 0.7078245778392352
+      beta: 0.7078245778392352
+      warm_start: 199
+  name: eddm_error23
+  type: error
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.019273023351117947
+      grace_period: 16
+      metric_conf:
+        name: proba_error
+  name: adwin_proba13
+  type: error
+- detectors:
+  - name: n_batch
+    params: {}
+  - name: tabular_alibi
+    params:
+      correction: bonferroni
+      p_val: 0.001206770869665142
+  name: tabular_alibi15
+  type: data
+- detectors:
+  - name: kswin
+    params:
+      alpha: 0.0007169422009026764
+      ks_window_size: 61
+      metric_conf:
+        name: proba_error
+      stat_size: 20
+  name: kswin_proba_error22
+  type: error
+- detectors:
+  - name: page_hinkley
+    params:
+      alpha: 0.988314486089133
+      delta: 0.005089550822819335
+      metric_conf:
+        name: class_error
+      min_instances: 141
+      threshold: 14.007470415765326
+  name: page_hinkley_class_error21
+  type: error
+- detectors:
+  - name: kswin
+    params:
+      alpha: 0.007176081217769538
+      ks_window_size: 970
+      metric_conf:
+        name: class_error
+      stat_size: 323
+  name: kswin_class_error11
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.27716352104701814
+      lambda_val: 0.31458453003854103
+  name: hddm_w_error24
+  type: error
+- detectors:
+  - name: eddm
+    params:
+      alpha: 0.9
+      beta: 0.9
+      warm_start: 30
+  name: eddm_error0
+  type: error
+- detectors:
+  - name: adwin
+    params:
+      delta: 0.05808449600097512
+      grace_period: 868
+      metric_conf:
+        name: class_error
+  name: adwin_class4
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.5050415133506825
+      lambda_val: 0.44384853261139096
+  name: hddm_w_error10
+  type: error
+- detectors:
+  - name: ddm
+    params:
+      drift_threshold: 1.3632273297069606
+      warm_start: 42
+  name: ddm_error22
+  type: error
+- detectors:
+  - name: hddm_w
+    params:
+      drift_confidence: 0.7319939418114051
+      lambda_val: 0.5986584841970366
+  name: hddm_w_error2
+  type: error
+- detectors:
+  - name: n_batch
+    params:
+      batch_size: 50
+  - name: pca_cd
+    params:
+      delta: 0.1
+      divergence_metric: mkl
+      ev_threshold: 0.99
+      ph_t_ratio: 0.001
+  name: pca_cd0
+  type: data

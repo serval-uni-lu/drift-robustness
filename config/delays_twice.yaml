@@ -1,0 +1,6 @@
+---
+common_runs_params:
+  delays:
+    label: 10days
+    drift: 0
+    retraining: 8W

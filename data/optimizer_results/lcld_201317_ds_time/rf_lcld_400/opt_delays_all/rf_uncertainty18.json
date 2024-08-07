@@ -1,0 +1,154 @@
+{
+    "config": {
+        "logging": {
+            "version": 1,
+            "formatters": {
+                "simple": {
+                    "format": "[%(levelname)-.4s] %(asctime)s - %(name)s - %(message)s"
+                }
+            },
+            "handlers": {
+                "console": {
+                    "class": "logging.StreamHandler",
+                    "level": "DEBUG",
+                    "formatter": "simple",
+                    "stream": "ext://sys.stdout"
+                }
+            },
+            "loggers": {
+                "__main__": {
+                    "level": "DEBUG"
+                },
+                "optuna": {
+                    "level": "ERROR"
+                }
+            },
+            "root": {
+                "level": "DEBUG",
+                "handlers": [
+                    "console"
+                ]
+            }
+        },
+        "performance": {
+            "predict_forward": 5000,
+            "n_jobs": {
+                "model": 16,
+                "optimizer": 2
+            }
+        },
+        "experience": {
+            "random_state": 42
+        },
+        "evaluation_params": {
+            "batch_size": 20000,
+            "metric": {
+                "name": "mcc"
+            },
+            "n_score": 2,
+            "n_splits": 4
+        },
+        "dataset": {
+            "name": "lcld_201317_ds_time"
+        },
+        "common_detectors_params": {
+            "batch_size": 5000
+        },
+        "common_runs_params": {
+            "first_train_window_size": -1,
+            "training_step_size": 5000,
+            "test_start_idx": 400000,
+            "random_state": 42,
+            "train_window_size": -1,
+            "model": {
+                "source": "drift_study.model_arch.tree_model",
+                "name": "rf_lcld_400"
+            },
+            "delays": {
+                "label": "10days",
+                "drift": 0,
+                "retraining": "4W"
+            },
+            "name": "rf_uncertainty",
+            "type": "predictive",
+            "detectors": [
+                {
+                    "name": "n_batch"
+                },
+                {
+                    "name": "rf_uncertainty"
+                },
+                {
+                    "name": "adwin",
+                    "params": {
+                        "metric_conf": {
+                            "name": "y_scores"
+                        },
+                        "delta": 0.023922371373417795,
+                        "grace_period": 407
+                    }
+                }
+            ]
+        },
+        "trial_params": {
+            "n_trials": 25,
+            "model_type": "random_forest"
+        },
+        "runs": [
+            {
+                "first_train_window_size": -1,
+                "training_step_size": 5000,
+                "test_start_idx": 400000,
+                "random_state": 42,
+                "train_window_size": -1,
+                "model": {
+                    "source": "drift_study.model_arch.tree_model",
+                    "name": "rf_lcld_400"
+                },
+                "delays": {
+                    "label": "10days",
+                    "drift": 0,
+                    "retraining": "4W"
+                },
+                "name": "rf_uncertainty18",
+                "type": "predictive",
+                "detectors": [
+                    {
+                        "name": "n_batch",
+                        "params": {}
+                    },
+                    {
+                        "name": "rf_uncertainty",
+                        "params": {
+                            "uncertainty_type": "total"
+                        }
+                    },
+                    {
+                        "name": "adwin",
+                        "params": {
+                            "metric_conf": {
+                                "name": "y_scores"
+                            },
+                            "delta": 0.2550420213493127,
+                            "grace_period": 975
+                        }
+                    }
+                ]
+            }
+        ],
+        "buggy_if_left_empty": 0,
+        "sub_dir_path": "opt400_delays_all"
+    },
+    "n_train": [
+        3,
+        4,
+        7,
+        9
+    ],
+    "ml_metric": [
+        0.2676404460724825,
+        0.26442465538983484,
+        0.25793638490906373,
+        0.24717700844060053
+    ]
+}

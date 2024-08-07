@@ -1,0 +1,91 @@
+runs:
+  - name: adwin_proba
+    type: error
+    detectors:
+      - name: adwin
+        params:
+          metric_conf:
+            name: proba_error
+  - name: adwin_class
+    type: error
+    detectors:
+      - name: adwin
+        params:
+          metric_conf:
+            name: class_error
+  - name: ddm_error
+    type: error
+    detectors:
+      - name: ddm
+  - name: eddm_error
+    type: error
+    detectors:
+      - name: eddm
+  - name: hddm_a_error
+    type: error
+    detectors:
+      - name: hddm_a
+  - name: hddm_w_error
+    type: error
+    detectors:
+      - name: hddm_w
+  - name: kswin_class_error
+    type: error
+    detectors:
+      - name: kswin
+        params:
+          metric_conf:
+            name: class_error
+  - name: kswin_proba_error
+    type: error
+    detectors:
+      - name: kswin
+        params:
+          metric_conf:
+            name: proba_error
+  - name: page_hinkley_class_error
+    type: error
+    detectors:
+      - name: page_hinkley
+        params:
+          metric_conf:
+            name: class_error
+  - name: page_hinkley_proba_error
+    type: error
+    detectors:
+      - name: page_hinkley
+        params:
+          metric_conf:
+            name: proba_error
+  - name: data_evidently
+    type: data
+    detectors:
+      - name: n_batch
+      - name: evidently
+  - name: tabular_alibi
+    type: data
+    detectors:
+      - name: n_batch
+      - name: tabular_alibi
+  - name: pca_cd
+    type: data
+    detectors:
+      - name: n_batch
+        params:
+          batch_size: 50
+      - name: pca_cd
+  - name: aries_all
+    type: predictive
+    detectors:
+      - name: n_batch
+      - name: aries
+      - name: adwin
+  - name: rf_uncertainty
+    type: predictive
+    detectors:
+      - name: n_batch
+      - name: rf_uncertainty
+      - name: adwin
+        params:
+          metric_conf:
+            name: y_scores
